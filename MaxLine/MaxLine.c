@@ -3,6 +3,7 @@
  *
  *  Created on: 2017年3月13日
  *      Author: Milk
+ 此程序的功能是打印出输入文件的最长行
  */
 
 #include <stdio.h>
@@ -11,10 +12,10 @@ int getline(char line[], int maxline);
 void copy(char to[], char from[]);
 main()
 {
-	int len;
-	int max;
-	char line[MAXLINE];
-	char longest[MAXLINE];
+	int len; /*当前行长度*/	
+	int max; /*目前为止的最长行*/                         
+	char line[MAXLINE]; /*当前输入行*/                 
+	char longest[MAXLINE]; /* 用于保存最长行*/                         
 	max = 0;
 	while ((len = getline(line, MAXLINE)) > 0)
 		if (len > max){
